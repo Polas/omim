@@ -47,6 +47,7 @@ NSString * const kLightFontName = @"HelveticaNeue-Light";
 + (UIFont *)italic16 { return [UIFont italicSystemFontOfSize:16]; }
 + (UIFont *)semibold12 { return [UIFont systemFontOfSize:14 weight:UIFontWeightSemibold]; }
 + (UIFont *)semibold14 { return [UIFont systemFontOfSize:14 weight:UIFontWeightSemibold]; }
++ (UIFont *)semibold15 { return [UIFont systemFontOfSize:15 weight:UIFontWeightSemibold]; }
 + (UIFont *)semibold16 { return [UIFont systemFontOfSize:16 weight:UIFontWeightSemibold]; }
 + (UIFont *)fredokaRegular25 { return [UIFont fontWithName:@"FredokaOne-Regular" size:25]; }
 

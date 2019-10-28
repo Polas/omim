@@ -27,8 +27,6 @@ class TermsOfUseController: WelcomeViewController {
   let privacyPolicyLink = MWMAuthorizationViewModel.privacyPolicyLink()
   let termsOfUseLink = MWMAuthorizationViewModel.termsOfUseLink()
 
-  @IBOutlet weak var alertAdditionalText: UILabel!
-
   @IBOutlet private weak var privacyPolicyTextView: UITextView! {
     didSet {
       let htmlString = String(coreFormat: L("sign_agree_pp_gdpr"), arguments: [privacyPolicyLink])
@@ -36,6 +34,9 @@ class TermsOfUseController: WelcomeViewController {
                                                        NSAttributedString.Key.foregroundColor: UIColor.blackPrimaryText()]
       privacyPolicyTextView.attributedText = NSAttributedString.string(withHtml: htmlString,
                                                                        defaultAttributes: attributes)
+      privacyPolicyTextView.linkTextAttributes = [NSAttributedString.Key.font: UIFont.regular16(),
+                                                  NSAttributedString.Key.foregroundColor: UIColor.linkBlue(),
+                                                  NSAttributedString.Key.underlineColor: UIColor.clear]
       privacyPolicyTextView.delegate = self
     }
   }
@@ -47,20 +48,23 @@ class TermsOfUseController: WelcomeViewController {
                                                        NSAttributedString.Key.foregroundColor: UIColor.blackPrimaryText()]
       termsOfUseTextView.attributedText = NSAttributedString.string(withHtml: htmlString,
                                                                     defaultAttributes: attributes)
+      termsOfUseTextView.linkTextAttributes = [NSAttributedString.Key.font: UIFont.regular16(),
+                                                  NSAttributedString.Key.foregroundColor: UIColor.linkBlue(),
+                                                  NSAttributedString.Key.underlineColor: UIColor.clear]
       termsOfUseTextView.delegate = self
     }
   }
 
   @IBOutlet private weak var privacyPolicyCheck: Checkmark! {
     didSet {
-      privacyPolicyCheck.offTintColor = .blackHintText()
+      privacyPolicyCheck.offTintColor = .blackDividers()
       privacyPolicyCheck.onTintColor = .linkBlue()
     }
   }
 
   @IBOutlet private weak var termsOfUseCheck: Checkmark! {
     didSet {
-      termsOfUseCheck.offTintColor = .blackHintText()
+      termsOfUseCheck.offTintColor = .blackDividers()
       termsOfUseCheck.onTintColor = .linkBlue()
     }
   }
@@ -68,17 +72,17 @@ class TermsOfUseController: WelcomeViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    image.image = #imageLiteral(resourceName: "img_welcome")
-    alertTitle.text = L("onboarding_welcome_title")
-    alertText.text = L("onboarding_welcome_first_subtitle")
-    alertAdditionalText.text = L("sign_message_gdpr")
-    nextPageButton.setTitle(L("whats_new_next_button"), for: .normal)
+    image.image = UIImage(named: "img_onboarding_travelbuddy")
+    alertTitle.text = L("new_onboarding_step1_header")
+    alertText.text = L("new_onboarding_step1_message")
 
     Statistics.logEvent("OnStart_MapsMeConsent_shown")
   }
 
   @IBAction func onCheck(_ sender: Checkmark) {
-    nextPageButton.isEnabled = privacyPolicyCheck.isChecked && termsOfUseCheck.isChecked;
+    if (privacyPolicyCheck.isChecked && termsOfUseCheck.isChecked){
+      nextPage();
+    }
   }
 
   @IBAction func onPrivacyTap(_ sender: UITapGestureRecognizer) {

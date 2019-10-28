@@ -16,26 +16,21 @@ final class FirstLaunchController: WelcomeViewController {
   
   static var welcomeConfigs: [WelcomeConfig] {
     return [
-      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_offline_maps"),
-                        title: "onboarding_offline_maps_title",
-                        text: "onboarding_offline_maps_message",
-                        buttonTitle: "whats_new_next_button",
+      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_dreamnplan"),
+                        title: "new_onboarding_step2_header",
+                        text: "new_onboarding_step2_message",
+                        buttonTitle: "new_onboarding_button",
                         requestPermission: .nothing),
-      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_geoposition"),
-                        title: "onboarding_location_title",
-                        text: "onboarding_location_message",
-                        buttonTitle: "whats_new_next_button",
-                        requestPermission: .nothing),
-      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_notification"),
-                        title: "onboarding_notifications_title",
-                        text: "onboarding_notifications_message",
-                        buttonTitle: "whats_new_next_button",
+      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_offlinemaps"),
+                        title: "new_onboarding_step3_header",
+                        text: "new_onboarding_step3_message",
+                        buttonTitle: "new_onboarding_button",
                         requestPermission: .location),
-      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_done"),
-                        title: "first_launch_congrats_title",
-                        text: "first_launch_congrats_text",
-                        buttonTitle: "done",
-                        requestPermission: .notifications)
+      FirstLaunchConfig(image: #imageLiteral(resourceName: "img_onboarding_sharebookmarks"),
+                        title: "new_onboarding_step4_header",
+                        text: "new_onboarding_step4_message",
+                        buttonTitle: "new_onboarding_button_2",
+                        requestPermission: .notifications),
     ]
   }
 
