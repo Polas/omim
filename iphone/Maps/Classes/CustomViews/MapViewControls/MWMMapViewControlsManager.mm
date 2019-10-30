@@ -303,7 +303,7 @@ extern NSString * const kAlohalyticsTapEventKey;
 - (UIButton *)promoButton {
   if (!_promoButton) {
     PromoCoordinator * coordinator = [[PromoCoordinator alloc] initWithViewController:self.ownerController
-                                                                                 type:PromoTypeDiscoveryFree];
+                                                                                 type:PromoTypeDiscoverySubscribe];
     _promoButton = [[PromoButton alloc] initWithCoordinator:coordinator];
   }
   return _promoButton;

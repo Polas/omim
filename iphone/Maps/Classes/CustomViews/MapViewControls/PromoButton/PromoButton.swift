@@ -65,7 +65,7 @@ import UIKit
   }
 
   @objc private func onButtonPress(sender: UIButton){
-    coordinator.openPromo(completion: {[weak self] in
+    coordinator.onPromoButtonPress(completion: {[weak self] in
       self?.isHidden = true;
       self?.timer?.invalidate()
       self?.timer = nil

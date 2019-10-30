@@ -1,51 +1,45 @@
-protocol WelcomeConfig {
-  var image: UIImage { get }
-  var title: String { get }
-  var text: String { get }
-  var buttonTitle: String { get }
-}
+class WelcomeViewController: MWMViewController, WelcomeViewProtocol {
+  var presenter: WelcomePresenterProtocol?
 
-protocol WelcomeViewControllerDelegate: class {
-  func welcomeViewControllerDidPressNext(_ viewContoller: WelcomeViewController)
-  func welcomeViewControllerDidPressClose(_ viewContoller: WelcomeViewController)
-}
+  @IBOutlet private var image: UIImageView!
+  @IBOutlet private var alertTitle: UILabel!
+  @IBOutlet private var alertText: UILabel!
+  @IBOutlet private var nextButton: UIButton!
+  @IBOutlet private var laterButton: UIButton!
+  @IBOutlet private var laterButtonHeightConstraint: NSLayoutConstraint!
 
-class WelcomeViewController: MWMViewController {
-
-  weak var delegate: WelcomeViewControllerDelegate?
-  
-  @IBOutlet weak var image: UIImageView!
-  @IBOutlet weak var alertTitle: UILabel!
-  @IBOutlet weak var alertText: UILabel!
-  @IBOutlet weak var nextPageButton: UIButton!
-
-  var pageConfig: WelcomeConfig?
-  
-  class var key: String { return "" }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    configInternal()
-  }
-  
-  override func viewWillAppear(_ animated: Bool) {
-    super.viewWillAppear(animated)
-  }
-  
-  private func configInternal() {
-    if let config = pageConfig {
-      image.image = config.image
-      alertTitle.text = L(config.title)
-      alertText.text = L(config.text)
-      nextPageButton.setTitle(L(config.buttonTitle), for: .normal)
+  var isLaterButtonHidden: Bool = false{
+    didSet{
+      laterButtonHeightConstraint.constant = isLaterButtonHidden ? 0 : 32
     }
   }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    presenter?.configure()
+  }
 
-  @IBAction func nextPage() {
-    delegate?.welcomeViewControllerDidPressNext(self)
+  func setTitle(_ title: String){
+    alertTitle.text = title;
   }
-  
-  @IBAction func close() {
-    delegate?.welcomeViewControllerDidPressClose(self)
+
+  func setText(_ text: String){
+    alertText.text = text;
   }
+
+  func setNextButtonTitle(_ title: String){
+    nextButton.setTitle(title, for: .normal)
+  }
+
+  func setTitleImage(_ titleImage: UIImage?){
+    image.image = titleImage
+  }
+
+  @IBAction func onNextButton(_ sender: UIButton) {
+    presenter?.onNext()
+  }
+
+  @IBAction func onLaterButton(_ sender: UIButton) {
+    presenter?.onLater()
+  }
+
 }

@@ -13,29 +13,29 @@ import UIKit
     self.type = type
   }
 
-  func openPromo(completion: @escaping ()->()) {
+  func onPromoButtonPress(completion: @escaping ()->()) {
     switch type {
     case .crown:
-      openBookmarksSubscription(completion: completion);
+      presentBookmarksSubscription(completion: completion);
     case .discoveryGuide, .discoverySubscribe, .discoveryFree:
-      openPromoDiscoveryOnboarding(completion: completion)
+      presentPromoDiscoveryOnboarding(completion: completion)
     }
   }
 
-  func openDiscovery(inViewController viewController: UIViewController) {
+  func onDiscoveryButtonPress(inViewController viewController: UIViewController) {
     switch type {
     case .crown:
       print("err")
     case .discoveryGuide:
-      openPromoDiscoveryGuide(inViewController: viewController)
+      presentPromoDiscoveryGuide(inViewController: viewController)
     case .discoverySubscribe:
-      openPromoDiscoverySubscribe(inViewController: viewController)
+      presentPromoDiscoverySubscribe(inViewController: viewController)
     case .discoveryFree:
-      openPromoDiscoveryFree(inViewController: viewController)
+      presentPromoDiscoveryFree(inViewController: viewController)
     }
   }
 
-  private func openBookmarksSubscription(completion: @escaping ()->()) {
+  private func presentBookmarksSubscription(completion: @escaping ()->()) {
     let subscribeViewController = BookmarksSubscriptionViewController()
     subscribeViewController.onSubscribe = {[weak self] in
       self?.mapViewController?.dismiss(animated: true, completion: nil)
@@ -57,23 +57,21 @@ import UIKit
     MWMEye.crownClicked()
   }
 
-  private func openPromoDiscoveryOnboarding(completion: @escaping ()->()) {
-    let sb = UIStoryboard.instance(.welcome)
-    let vc = sb.instantiateViewController(withIdentifier: "PromoDiscoverViewController") as! PromoDiscoverViewController
-    vc.setCoordinator(coordinator: self)
+  private func presentPromoDiscoveryOnboarding(completion: @escaping ()->()) {
+    let vc = PromoDiscoveryBuilder.build(rootViewController: mapViewController, type: type)
     vc.modalPresentationStyle = .fullScreen
     mapViewController?.present(vc, animated: true, completion: {
       completion()
     })
   }
 
-  private func openPromoDiscoveryGuide(inViewController viewController: UIViewController) {
+  private func presentPromoDiscoveryGuide(inViewController viewController: UIViewController) {
     mapViewController?.dismiss(animated: true, completion: nil)
     let webViewController = CatalogWebViewController.catalogFromAbsoluteUrl(nil, utm: .bookmarksPageCatalogButton)
     mapViewController?.navigationController?.pushViewController(webViewController, animated: true)
   }
 
-  private func openPromoDiscoverySubscribe(inViewController viewController: UIViewController) {
+  private func presentPromoDiscoverySubscribe(inViewController viewController: UIViewController) {
     let subscribeViewController = AllPassSubscriptionViewController()
     subscribeViewController.onSubscribe = { [weak self] in
       self?.mapViewController?.dismiss(animated: true)
@@ -89,10 +87,9 @@ import UIKit
     viewController.present(subscribeViewController, animated: true)
   }
 
-  private func openPromoDiscoveryFree(inViewController viewController: UIViewController) {
+  private func presentPromoDiscoveryFree(inViewController viewController: UIViewController) {
     mapViewController?.dismiss(animated: true, completion: nil)
     let webViewController = CatalogWebViewController.catalogFromAbsoluteUrl(nil, utm: .bookmarksPageCatalogButton)
     mapViewController?.navigationController?.pushViewController(webViewController, animated: true)
   }
-
 }

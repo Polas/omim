@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SUr-DE-jaE">
-                                        <rect key="frame" x="20" y="116.66666666666663" width="374" height="505"/>
+                                        <rect key="frame" x="20" y="116.5" width="374" height="505.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="cvb-Ev-qIP">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -29,7 +29,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQN-Nv-Q8D">
-                                                <rect key="frame" x="0.0" y="398" width="374" height="52.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="398" width="374" height="53"/>
                                                 <string key="text">MAPS.ME 
 All in one travel buddy</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -41,7 +41,7 @@ All in one travel buddy</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="To continue you must accept our Terms of Use and Privacy Policy. Please read them carefully. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qo9-H8-xrQ">
-                                                <rect key="frame" x="0.0" y="466.66666666666674" width="374" height="38.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="467" width="374" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -93,14 +93,14 @@ All in one travel buddy</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HJ1-Ah-JkV">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="v2o-Fy-Mjp"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcI-nV-BfG">
-                                        <rect key="frame" x="0.0" y="621.66666666666663" width="414" height="116.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="622" width="414" height="116"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -206,7 +206,7 @@ All in one travel buddy</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tm5-G5-Xsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="698.55072463768124" y="0.0"/>
+            <point key="canvasLocation" x="696" y="715"/>
         </scene>
         <!--First Launch Controller-->
         <scene sceneID="gqo-Ea-vFU">
@@ -220,7 +220,7 @@ All in one travel buddy</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqL-qP-XjV">
-                                        <rect key="frame" x="20" y="116.66666666666663" width="374" height="505"/>
+                                        <rect key="frame" x="20" y="116.5" width="374" height="505.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="YI4-IQ-M9u">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -229,7 +229,7 @@ All in one travel buddy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ef-YS-XjO">
-                                                <rect key="frame" x="0.0" y="398" width="374" height="52.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="398" width="374" height="53"/>
                                                 <string key="text">MAPS.ME 
 All in one travel buddy</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -241,7 +241,7 @@ All in one travel buddy</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="To continue you must accept our Terms of Use and Privacy Policy. Please read them carefully. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oCG-8k-j6v">
-                                                <rect key="frame" x="0.0" y="466.66666666666674" width="374" height="38.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="467" width="374" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -293,14 +293,14 @@ All in one travel buddy</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M5j-sq-7HB">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="gH0-im-rax"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-c8-8bY">
-                                        <rect key="frame" x="0.0" y="621.66666666666663" width="414" height="116.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="622" width="414" height="116"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -407,7 +407,7 @@ All in one travel buddy</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJl-VJ-BMU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1394.2028985507247" y="0.0"/>
+            <point key="canvasLocation" x="1449" y="715"/>
         </scene>
         <!--Deeplink Info View Controller-->
         <scene sceneID="ced-lm-4Wu">
@@ -421,7 +421,7 @@ All in one travel buddy</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8M-OO-BYe">
-                                        <rect key="frame" x="20" y="116.66666666666663" width="374" height="505"/>
+                                        <rect key="frame" x="20" y="116.5" width="374" height="505.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="img_onboarding_downloadmaps" translatesAutoresizingMaskIntoConstraints="NO" id="bVB-mS-zvT">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -430,7 +430,7 @@ All in one travel buddy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Br2-d9-e3R">
-                                                <rect key="frame" x="0.0" y="398" width="374" height="52.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="398" width="374" height="53"/>
                                                 <string key="text">MAPS.ME 
 All in one travel buddy</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -442,7 +442,7 @@ All in one travel buddy</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="To continue you must accept our Terms of Use and Privacy Policy. Please read them carefully. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8H-uT-Quv">
-                                                <rect key="frame" x="0.0" y="466.66666666666674" width="374" height="38.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="467" width="374" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -494,14 +494,14 @@ All in one travel buddy</string>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmP-aN-0Ti">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="116.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="djf-1g-0xk"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="huB-Uz-ldz">
-                                        <rect key="frame" x="0.0" y="621.66666666666663" width="414" height="116.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="622" width="414" height="116"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -608,7 +608,7 @@ All in one travel buddy</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gcD-kn-d2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2066" y="0.0"/>
+            <point key="canvasLocation" x="2132" y="715"/>
         </scene>
         <!--Terms Of Use Controller-->
         <scene sceneID="ee6-kg-2w1">
@@ -619,7 +619,7 @@ All in one travel buddy</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8OW-T7-BM2">
-                                <rect key="frame" x="20" y="141.66666666666663" width="374" height="623"/>
+                                <rect key="frame" x="20" y="141.5" width="374" height="623.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="NNh-bx-fiW">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -628,7 +628,7 @@ All in one travel buddy</string>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbi-ym-j4p">
-                                        <rect key="frame" x="0.0" y="398" width="374" height="52.666666666666686"/>
+                                        <rect key="frame" x="0.0" y="398" width="374" height="53"/>
                                         <string key="text">MAPS.ME 
 All in one travel buddy</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -640,7 +640,7 @@ All in one travel buddy</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="To continue you must accept our Terms of Use and Privacy Policy. Please read them carefully. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Leo-V1-UCZ">
-                                        <rect key="frame" x="0.0" y="466.66666666666674" width="374" height="38.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="467" width="374" height="38.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -650,10 +650,10 @@ All in one travel buddy</string>
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-qx-Qge">
-                                        <rect key="frame" x="61.666666666666686" y="521" width="251" height="51.333333333333371"/>
+                                        <rect key="frame" x="61.5" y="521.5" width="251" height="51.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="60N-32-WZ3" customClass="Checkmark" customModule="maps_me" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="52" height="51.333333333333336"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="51.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="welcome_storyboard.agree_privacy.check"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="52" id="Udy-GJ-bT9"/>
@@ -667,7 +667,7 @@ All in one travel buddy</string>
                                                 </connections>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" text="I agree to Privacy Policy" translatesAutoresizingMaskIntoConstraints="NO" id="Ai2-v2-KXg" customClass="LinkTextView" customModule="maps_me" customModuleProvider="target">
-                                                <rect key="frame" x="52" y="8" width="183" height="35.333333333333336"/>
+                                                <rect key="frame" x="52" y="8" width="183" height="35.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="welcome_storyboard.agree_privacy.text"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
@@ -695,10 +695,10 @@ All in one travel buddy</string>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbF-ri-Vws">
-                                        <rect key="frame" x="61.666666666666686" y="572.33333333333337" width="251" height="51.666666666666629"/>
+                                        <rect key="frame" x="61.5" y="573" width="251" height="51.5"/>
                                         <subviews>
                                             <view opaque="NO" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="fjg-ct-dro" customClass="Checkmark" customModule="maps_me" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="52" height="51.666666666666664"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="51.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="welcome_storyboard.agree_terms.check"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="52" id="ik1-pS-9ae"/>
@@ -712,7 +712,7 @@ All in one travel buddy</string>
                                                 </connections>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" text="I agree to Terms of Use" translatesAutoresizingMaskIntoConstraints="NO" id="Zoj-oq-U2G" customClass="LinkTextView" customModule="maps_me" customModuleProvider="target">
-                                                <rect key="frame" x="52" y="8" width="183" height="35.666666666666664"/>
+                                                <rect key="frame" x="52" y="8" width="183" height="35.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="welcome_storyboard.agree_terms.text"/>
                                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
@@ -788,11 +788,11 @@ All in one travel buddy</string>
             </objects>
             <point key="canvasLocation" x="-122" y="0.0"/>
         </scene>
-        <!--Promo Discover View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="n1B-sA-urT">
             <objects>
-                <viewController storyboardIdentifier="PromoDiscoverViewController" id="297-Lh-69k" customClass="PromoDiscoverViewController" customModule="maps_me" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PbT-65-BE7" customClass="SolidTouchView">
+                <viewController storyboardIdentifier="WelcomeViewController" id="297-Lh-69k" customClass="WelcomeViewController" customModule="maps_me" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PbT-65-BE7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -800,7 +800,7 @@ All in one travel buddy</string>
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JU-24-KmH">
-                                        <rect key="frame" x="20" y="100.66666666666663" width="374" height="505"/>
+                                        <rect key="frame" x="20" y="100.5" width="374" height="505.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="250" image="ic_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="28D-77-vUK">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="374"/>
@@ -809,7 +809,7 @@ All in one travel buddy</string>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUB-Wi-cFX">
-                                                <rect key="frame" x="0.0" y="398" width="374" height="52.666666666666686"/>
+                                                <rect key="frame" x="0.0" y="398" width="374" height="53"/>
                                                 <string key="text">MAPS.ME 
 All in one travel buddy</string>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
@@ -821,7 +821,7 @@ All in one travel buddy</string>
                                                 </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="To continue you must accept our Terms of Use and Privacy Policy. Please read them carefully. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E20-gb-nRV">
-                                                <rect key="frame" x="0.0" y="466.66666666666674" width="374" height="38.333333333333314"/>
+                                                <rect key="frame" x="0.0" y="467" width="374" height="38.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -868,26 +868,26 @@ All in one travel buddy</string>
                                             <userDefinedRuntimeAttribute type="string" keyPath="backgroundHighlightedColorName" value="linkBlueHighlighted"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onNextButton:" destination="297-Lh-69k" eventType="touchUpInside" id="4Cg-N9-fMC"/>
+                                            <action selector="onNextButton:" destination="297-Lh-69k" eventType="touchUpInside" id="LB0-Tt-YBL"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flm-sZ-NSs">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zcR-fU-Ny5"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AkJ-r8-PHz">
-                                        <rect key="frame" x="0.0" y="605.66666666666663" width="414" height="100.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="606" width="414" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnh-Ec-P27" userLabel="NotNow">
-                                        <rect key="frame" x="32" y="758" width="350" height="48"/>
+                                        <rect key="frame" x="32" y="766" width="350" height="32"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <accessibility key="accessibilityConfiguration" identifier="welcome_storyboard.button_next2"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="48" id="fjR-Ih-X19"/>
+                                            <constraint firstAttribute="height" constant="32" id="fjR-Ih-X19"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <state key="normal" title="Later">
@@ -901,7 +901,7 @@ All in one travel buddy</string>
                                             <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="new_onboarding_additional_steps_later_button"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="onLaterButton:" destination="297-Lh-69k" eventType="touchUpInside" id="xkV-cc-uo2"/>
+                                            <action selector="onLaterButton:" destination="297-Lh-69k" eventType="touchUpInside" id="3MB-vg-CQ0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -911,7 +911,7 @@ All in one travel buddy</string>
                                     <constraint firstItem="8JU-24-KmH" firstAttribute="top" secondItem="flm-sZ-NSs" secondAttribute="bottom" id="9gg-5l-Bs8"/>
                                     <constraint firstAttribute="trailing" secondItem="qnh-Ec-P27" secondAttribute="trailing" constant="32" id="9iV-uA-YH1"/>
                                     <constraint firstAttribute="trailing" secondItem="flm-sZ-NSs" secondAttribute="trailing" id="C8A-SE-odb"/>
-                                    <constraint firstAttribute="bottom" secondItem="qnh-Ec-P27" secondAttribute="bottom" constant="12" id="GPA-Ep-YCh"/>
+                                    <constraint firstAttribute="bottom" secondItem="qnh-Ec-P27" secondAttribute="bottom" constant="20" id="GPA-Ep-YCh"/>
                                     <constraint firstItem="AkJ-r8-PHz" firstAttribute="height" secondItem="flm-sZ-NSs" secondAttribute="height" id="Li8-UA-0HH"/>
                                     <constraint firstItem="8JU-24-KmH" firstAttribute="leading" secondItem="KeI-mG-doa" secondAttribute="leading" constant="20" id="PGA-Ja-7n6"/>
                                     <constraint firstAttribute="trailing" secondItem="AkJ-r8-PHz" secondAttribute="trailing" id="UFG-ec-3RB"/>
@@ -921,7 +921,7 @@ All in one travel buddy</string>
                                     <constraint firstItem="AkJ-r8-PHz" firstAttribute="top" secondItem="8JU-24-KmH" secondAttribute="bottom" id="i11-ZL-aVE"/>
                                     <constraint firstAttribute="height" constant="600" id="jGR-Ek-jNg"/>
                                     <constraint firstItem="hQh-GR-Qe0" firstAttribute="leading" secondItem="KeI-mG-doa" secondAttribute="leading" constant="32" id="lcO-rk-tAq"/>
-                                    <constraint firstItem="qnh-Ec-P27" firstAttribute="top" secondItem="hQh-GR-Qe0" secondAttribute="bottom" constant="4" id="uIK-6f-unN"/>
+                                    <constraint firstItem="qnh-Ec-P27" firstAttribute="top" secondItem="hQh-GR-Qe0" secondAttribute="bottom" constant="12" id="uIK-6f-unN"/>
                                     <constraint firstItem="qnh-Ec-P27" firstAttribute="leading" secondItem="KeI-mG-doa" secondAttribute="leading" constant="32" id="ucB-CV-WpE"/>
                                     <constraint firstItem="flm-sZ-NSs" firstAttribute="leading" secondItem="KeI-mG-doa" secondAttribute="leading" id="v9T-fZ-09B"/>
                                     <constraint firstAttribute="trailing" secondItem="hQh-GR-Qe0" secondAttribute="trailing" constant="32" id="vN5-MZ-qAT"/>
@@ -960,16 +960,17 @@ All in one travel buddy</string>
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
-                        <outlet property="alertText" destination="E20-gb-nRV" id="3gF-Bo-tdq"/>
-                        <outlet property="alertTitle" destination="TUB-Wi-cFX" id="Gob-E5-RPC"/>
-                        <outlet property="image" destination="28D-77-vUK" id="mcV-cL-7lv"/>
-                        <outlet property="laterButton" destination="qnh-Ec-P27" id="UYk-h4-pV0"/>
-                        <outlet property="nextButton" destination="hQh-GR-Qe0" id="fsn-zG-Yz4"/>
+                        <outlet property="alertText" destination="E20-gb-nRV" id="7ZJ-Ic-vUN"/>
+                        <outlet property="alertTitle" destination="TUB-Wi-cFX" id="PdI-8m-AUw"/>
+                        <outlet property="image" destination="28D-77-vUK" id="vT5-CI-Fci"/>
+                        <outlet property="laterButton" destination="qnh-Ec-P27" id="Yix-Ck-RE6"/>
+                        <outlet property="laterButtonHeightConstraint" destination="fjR-Ih-X19" id="f8i-hJ-XQ8"/>
+                        <outlet property="nextButton" destination="hQh-GR-Qe0" id="vfR-Dq-qKb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVp-pY-CfO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2786.25" y="0.0"/>
+            <point key="canvasLocation" x="696" y="0.0"/>
         </scene>
     </scenes>
     <resources>
