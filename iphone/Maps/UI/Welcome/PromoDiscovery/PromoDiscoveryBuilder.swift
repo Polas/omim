@@ -6,11 +6,6 @@ class PromoDiscoveryBuilder {
     let sb = UIStoryboard.instance(.welcome)
     let vc = sb.instantiateViewController(ofType: WelcomeViewController.self);
 
-    var config: PromoDiscoveryEntity?
-
-    sw
-
-
     let router = PromoDiscoveryRouter(viewController: vc,
                                       rootViewController: rootViewController,
                                       type: type)

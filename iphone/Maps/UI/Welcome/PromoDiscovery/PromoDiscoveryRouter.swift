@@ -1,5 +1,10 @@
 import Foundation
 
+protocol PromoDiscoveryRouterProtocol: class {
+  func dissmiss()
+  func presentNext()
+}
+
 class PromoDiscoveryRouter{
   private weak var viewController: UIViewController?
   private weak var rootViewController: MWMViewController?
@@ -12,21 +17,23 @@ class PromoDiscoveryRouter{
     self.rootViewController = rootViewController
     self.type = type
   }
+}
 
-  func dissmiss(){
+extension PromoDiscoveryRouter: PromoDiscoveryRouterProtocol {
+  func dissmiss() {
     viewController?.dismiss(animated: true, completion: nil)
   }
 
-  func presentNext(){
+  func presentNext() {
     switch type {
-    case .crown:
-      print("err")
     case .discoveryGuide:
       presentPromoDiscoveryGuide()
     case .discoverySubscribe:
       presentPromoDiscoverySubscribe()
     case .discoveryFree:
       presentPromoDiscoveryFree()
+    default:
+      dissmiss()
     }
   }
 
