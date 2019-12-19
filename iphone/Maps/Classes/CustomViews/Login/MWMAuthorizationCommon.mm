@@ -70,8 +70,8 @@ void AuthorizationConfigButton(UIButton * btn, AuthorizationButtonType type)
   [btn setTitleColor:txtCol forState:UIControlStateNormal];
   [btn setTitleColor:[txtCol colorWithAlphaComponent:highlightedAlpha] forState:UIControlStateHighlighted];
 
-  [btn setBackgroundColor:bgCol forState:UIControlStateNormal];
-  [btn setBackgroundColor:[bgCol colorWithAlphaComponent:highlightedAlpha] forState:UIControlStateHighlighted];
+//  [btn setBackgroundColor:bgCol forState:UIControlStateNormal];
+//  [btn setBackgroundColor:[bgCol colorWithAlphaComponent:highlightedAlpha] forState:UIControlStateHighlighted];
 }
 
 void AuthorizationStoreCredentials(osm::KeySecret const & keySecret)

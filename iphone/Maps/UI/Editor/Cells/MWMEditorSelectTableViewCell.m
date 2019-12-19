@@ -1,6 +1,6 @@
 #import "MWMEditorSelectTableViewCell.h"
 #import <CoreApi/MWMCommon.h>
-#import "UIImageView+Coloring.h"
+#import "SwiftBridge.h"
 
 @interface MWMEditorSelectTableViewCell ()
 
@@ -24,7 +24,7 @@
   self.delegate = delegate;
   self.icon.hidden = NO;
   self.icon.image = icon;
-  self.icon.mwm_coloring = MWMImageColoringBlack;
+  self.icon.styleName = @"MWMBlack";
   if (text && text.length != 0)
   {
     self.label.text = text;

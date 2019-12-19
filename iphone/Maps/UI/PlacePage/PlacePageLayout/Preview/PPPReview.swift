@@ -1,27 +1,9 @@
 @objc(MWMPPPReview)
 final class PPPReview: MWMTableViewCell {
   @IBOutlet private weak var ratingSummaryView: RatingSummaryView!
-  @IBOutlet private weak var reviewsLabel: UILabel! {
-    didSet {
-      reviewsLabel.font = UIFont.regular14()
-      reviewsLabel.textColor = UIColor.blackSecondaryText()
-    }
-  }
-
-  @IBOutlet private weak var pricingLabel: UILabel! {
-    didSet {
-      pricingLabel.font = UIFont.regular14()
-    }
-  }
-
-  @IBOutlet private weak var addReviewButton: UIButton! {
-    didSet {
-      addReviewButton.backgroundColor = UIColor.linkBlue()
-      addReviewButton.setTitle("+ \(L("leave_a_review"))", for: .normal)
-      addReviewButton.setTitleColor(UIColor.white, for: .normal)
-      addReviewButton.titleLabel?.font = UIFont.bold12()
-    }
-  }
+  @IBOutlet private weak var reviewsLabel: UILabel!
+  @IBOutlet private weak var pricingLabel: UILabel!
+  @IBOutlet private weak var addReviewButton: UIButton!
 
   @IBOutlet private weak var discountView: UIView!
   @IBOutlet private weak var discountLabel: UILabel!

@@ -1,12 +1,20 @@
+
 @objc(MWMThemeManager)
 final class ThemeManager: NSObject {
-
   private static let autoUpdatesInterval: TimeInterval = 30 * 60 // 30 minutes in seconds
 
   private static let instance = ThemeManager()
   private weak var timer: Timer?
+  private var isDarkModeEnabled: Bool = false
 
-  private override init() { super.init() }
+  private override init() {
+    super.init()
+  }
+
+  @objc static func setDarkModeEnabled(_ val: Bool) {
+    instance.isDarkModeEnabled = val
+    instance.update(theme: MWMSettings.theme())
+  }
 
   private func update(theme: MWMTheme) {
     let actualTheme: MWMTheme = { theme in
@@ -17,10 +25,15 @@ final class ThemeManager: NSObject {
       case .night: fallthrough
       case .vehicleNight: return isVehicleRouting ? .vehicleNight : .night
       case .auto:
-        guard isVehicleRouting else { return .day }
-        switch FrameworkHelper.daytime(at: MWMLocationManager.lastLocation()) {
-        case .day: return .vehicleDay
-        case .night: return .vehicleNight
+        if #available(iOS 13.0, *) {
+          guard isVehicleRouting else { return isDarkModeEnabled ? .night : .day }
+          return isDarkModeEnabled ? .vehicleNight : .vehicleDay
+        } else {
+          guard isVehicleRouting else { return .day }
+          switch FrameworkHelper.daytime(at: MWMLocationManager.lastLocation()) {
+          case .day: return .vehicleDay
+          case .night: return .vehicleNight
+          }
         }
       }
     }(theme)
@@ -36,10 +49,21 @@ final class ThemeManager: NSObject {
       }
     }(actualTheme)
 
+
     FrameworkHelper.setTheme(actualTheme)
     if nightMode != newNightMode {
       UIColor.setNightMode(newNightMode)
-      (UIViewController.topViewController() as! MWMController).mwm_refreshUI()
+      if newNightMode {
+        StyleManager.instance().setTheme(MainTheme(type: .dark, colors: NightColors(), fonts: Fonts()))
+      } else {
+        StyleManager.instance().setTheme(MainTheme(type: .light,colors: DayColors(), fonts: Fonts()))
+      }
+    } else if StyleManager.instance().hasTheme() == false {
+      if nightMode {
+        StyleManager.instance().setTheme(MainTheme(type: .dark, colors: NightColors(), fonts: Fonts()))
+      } else {
+        StyleManager.instance().setTheme(MainTheme(type: .light,colors: DayColors(), fonts: Fonts()))
+      }
     }
   }
 

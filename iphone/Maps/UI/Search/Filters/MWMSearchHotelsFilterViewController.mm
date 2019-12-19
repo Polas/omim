@@ -194,7 +194,6 @@ void configButton(UIButton * button, NSString * primaryText, NSString * secondar
 
 - (void)refreshViewAppearance
 {
-  self.view.backgroundColor = [UIColor pressBackground];
   self.tableView.backgroundColor = [UIColor clearColor];
   self.tableView.contentInset = {-20, 0, 80, 0};
 }

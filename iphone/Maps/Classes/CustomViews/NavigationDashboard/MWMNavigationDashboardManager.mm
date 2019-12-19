@@ -96,16 +96,16 @@ using Observers = NSHashTable<Observer>;
     [button setTitle:title forState:UIControlStateNormal];
 }
 
-- (void)mwm_refreshUI
-{
-  [_routePreview mwm_refreshUI];
-  [_navigationInfoView mwm_refreshUI];
-  [_navigationControlView mwm_refreshUI];
-  [_baseRoutePreviewStatus mwm_refreshUI];
-  [_transportRoutePreviewStatus mwm_refreshUI];
-  _etaAttributes = nil;
-  _etaSecondaryAttributes = nil;
-}
+//- (void)mwm_refreshUI
+//{
+//  [_routePreview mwm_refreshUI];
+//  [_navigationInfoView mwm_refreshUI];
+//  [_navigationControlView mwm_refreshUI];
+//  [_baseRoutePreviewStatus mwm_refreshUI];
+//  [_transportRoutePreviewStatus mwm_refreshUI];
+//  _etaAttributes = nil;
+//  _etaSecondaryAttributes = nil;
+//}
 
 - (void)onNavigationInfoUpdated
 {

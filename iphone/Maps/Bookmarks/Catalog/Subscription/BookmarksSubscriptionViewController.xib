@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,8 +41,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="bold28"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="colorName" value="linkBlue"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="bold28:linkBlueText"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="sightseeing_subscription_header_sightseeing"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
@@ -52,8 +51,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="bold28"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="colorName" value="blackPrimaryText"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="bold28:blackPrimaryText"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="sightseeing_subscription_header_subscription"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
@@ -76,8 +74,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium17"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorName" value="blackPrimaryText"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="medium17:blackPrimaryText"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="sightseeing_subscription_message"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -108,8 +105,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium17"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorName" value="blackPrimaryText"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="medium17:blackPrimaryText"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="sightseeing_subscription_message_2"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -140,8 +136,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium17"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorName" value="blackPrimaryText"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="medium17:blackPrimaryText"/>
                                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="sightseeing_subscription_message_3"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
@@ -180,14 +175,7 @@
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="textColorHighlightedName" value="white"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium14"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="6"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="white"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="linkBlue"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="backgroundHighlightedColorName" value="linkBlueHighlighted"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="FlatNormalButton"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="onAnnualButtonTap:" destination="-1" eventType="touchUpInside" id="KEE-ZN-J9Y"/>
@@ -206,17 +194,7 @@
                                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="textColorHighlightedName" value="white"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium14"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                    <integer key="value" value="6"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="blackHintText"/>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                                    <integer key="value" value="1"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="borderColorName" value="blackHintText"/>
-                                                <userDefinedRuntimeAttribute type="string" keyPath="backgroundHighlightedColorName" value="blackDividers"/>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="BookmarksSubscriptionMonthlyButton"/>
                                             </userDefinedRuntimeAttributes>
                                             <connections>
                                                 <action selector="onMonthlyButtonTap:" destination="-1" eventType="touchUpInside" id="Uc2-Qk-Flp"/>
@@ -234,7 +212,7 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="discountBackground"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="BookmarksSubscriptionDiscount"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
                                 <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a64-qc-DrZ" userLabel="Restore">
@@ -249,9 +227,7 @@
                                         <color key="titleColor" red="0.1176470588" green="0.58823529409999997" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="textColorHighlightedName" value="linkBlueHighlighted"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium14"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="linkBlue"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="FlatNormalInvButton"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="restore_subscription"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
@@ -265,8 +241,7 @@
                                     <color key="textColor" white="0.0" alpha="0.31555008561643838" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="regular9"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="colorName" value="blackHintText"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="regular9:blackHintText"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="subscription_terms_guides"/>
                                     </userDefinedRuntimeAttributes>
                                 </label>
@@ -282,9 +257,7 @@
                                         <color key="titleColor" white="0.5591291287173964" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="textColorHighlightedName" value="blackHintText"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium10"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="blackSecondaryText"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="TermsOfUseGrayButton"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="terms_of_use"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
@@ -303,9 +276,7 @@
                                         <color key="titleColor" white="0.55912912869999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </state>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="textColorHighlightedName" value="blackHintText"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="fontName" value="medium10"/>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="textColorName" value="blackSecondaryText"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="TermsOfUseGrayButton"/>
                                         <userDefinedRuntimeAttribute type="string" keyPath="localizedText" value="privacy_policy"/>
                                     </userDefinedRuntimeAttributes>
                                     <connections>
@@ -322,7 +293,7 @@
                                     <rect key="frame" x="0.0" y="1015" width="414" height="736"/>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="bookmarkSubscriptionFooterBackground"/>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="BookmarkSubscriptionFooterBackground"/>
                                     </userDefinedRuntimeAttributes>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Z-5m-unD">
@@ -380,7 +351,7 @@
                                 <constraint firstItem="bOS-sQ-rkD" firstAttribute="top" secondItem="Y38-kF-ZnW" secondAttribute="bottom" constant="20" id="xYU-mb-XeF"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="bookmarkSubscriptionBackground"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="BookmarkSubscriptionBackground"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
@@ -393,7 +364,7 @@
                         <constraint firstItem="Eiz-QQ-h0b" firstAttribute="width" secondItem="0eE-hs-sId" secondAttribute="width" id="ke9-ke-QPG"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="bookmarkSubscriptionScrollBackground"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="BookmarkSubscriptionScrollBackground"/>
                     </userDefinedRuntimeAttributes>
                 </scrollView>
                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHb-cU-Ze3">
@@ -410,7 +381,7 @@
                         <constraint firstItem="XZg-yN-Jtv" firstAttribute="centerY" secondItem="BHb-cU-Ze3" secondAttribute="centerY" id="CQX-i5-ZcY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="toastBackground"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="ToastBackground"/>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
@@ -427,7 +398,7 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="k4r-ns-RCJ"/>
             <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="string" keyPath="backgroundColorName" value="white"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="Background"/>
             </userDefinedRuntimeAttributes>
             <point key="canvasLocation" x="46.376811594202906" y="110.86956521739131"/>
         </view>

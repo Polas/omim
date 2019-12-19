@@ -1,20 +1,7 @@
 @objc(MWMUGCSummaryRatingCell)
 final class UGCSummaryRatingCell: MWMTableViewCell {
-  @IBOutlet private weak var titleLabel: UILabel! {
-    didSet {
-      titleLabel.font = UIFont.bold22()
-      titleLabel.textColor = UIColor.blackPrimaryText()
-      titleLabel.text = L("placepage_summary_rating")
-    }
-  }
-
-  @IBOutlet private weak var countLabel: UILabel! {
-    didSet {
-      countLabel.font = UIFont.regular12()
-      countLabel.textColor = UIColor.blackSecondaryText()
-    }
-  }
-
+  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet private weak var countLabel: UILabel!
   @IBOutlet private weak var ratingSummaryView: RatingSummaryView! {
     didSet {
       ratingSummaryView.horribleColor = UIColor.ratingRed()

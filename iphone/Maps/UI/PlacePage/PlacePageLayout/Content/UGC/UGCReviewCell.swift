@@ -1,19 +1,7 @@
 @objc(MWMUGCReviewCell)
 final class UGCReviewCell: MWMTableViewCell {
-  @IBOutlet private weak var titleLabel: UILabel! {
-    didSet {
-      titleLabel.font = UIFont.bold14()
-      titleLabel.textColor = UIColor.blackPrimaryText()
-    }
-  }
-
-  @IBOutlet private weak var dateLabel: UILabel! {
-    didSet {
-      dateLabel.font = UIFont.regular12()
-      dateLabel.textColor = UIColor.blackSecondaryText()
-    }
-  }
-
+  @IBOutlet private weak var titleLabel: UILabel!
+  @IBOutlet private weak var dateLabel: UILabel! 
   @IBOutlet private weak var ratingView: RatingSummaryView! {
     didSet {
       ratingView.defaultConfig()

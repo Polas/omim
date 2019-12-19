@@ -4,67 +4,36 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIColor (MapsMeColor)
 
-+ (UIColor *)primaryDark;
++ (UIColor *)blackPrimaryText; //SEARCH
++ (UIColor *)blackSecondaryText; //SEARCH
++ (UIColor *)blackHintText; //SEARCH
++ (UIColor *)red; //SEARCH
++ (UIColor *)white; //SEARCH
 + (UIColor *)primary;
-+ (UIColor *)secondary;
-+ (UIColor *)primaryLight;
-+ (UIColor *)fadeBackground;
-+ (UIColor *)menuBackground;
-+ (UIColor *)downloadBadgeBackground;
-+ (UIColor *)pressBackground;
-+ (UIColor *)yellow;
-+ (UIColor *)green;
-+ (UIColor *)red;
-+ (UIColor *)errorPink;
-+ (UIColor *)orange;
++ (UIColor *)pressBackground; // One dep
 + (UIColor *)linkBlue;
 + (UIColor *)linkBlueHighlighted;
-+ (UIColor *)linkBlueDark;
 + (UIColor *)buttonRed;
-+ (UIColor *)buttonRedHighlighted;
-+ (UIColor *)blackPrimaryText;
-+ (UIColor *)blackSecondaryText;
-+ (UIColor *)blackStatusBarBackground;
-+ (UIColor *)blackHintText;
 + (UIColor *)blackDividers;
-+ (UIColor *)white;
 + (UIColor *)whitePrimaryText;
 + (UIColor *)whitePrimaryTextHighlighted;
-+ (UIColor *)whiteSecondaryText;
 + (UIColor *)whiteHintText;
-+ (UIColor *)whiteDividers;
 + (UIColor *)buttonDisabledBlueText;
-+ (UIColor *)buttonHighlightedBlueText;
-+ (UIColor *)alertBackground;
 + (UIColor *)blackOpaque;
 + (UIColor *)bookingBackground;
 + (UIColor *)opentableBackground;
 + (UIColor *)bannerBackground;
-+ (UIColor *)bannerButtonBackground;
-+ (UIColor *)toastBackground;
-+ (UIColor *)statusBarBackground;
 + (UIColor *)transparentGreen;
 + (UIColor *)ratingRed;
 + (UIColor *)ratingOrange;
 + (UIColor *)ratingYellow;
 + (UIColor *)ratingLightGreen;
 + (UIColor *)ratingGreen;
-+ (UIColor *)border;
 + (UIColor *)speedLimitRed;
 + (UIColor *)speedLimitGeen;
 + (UIColor *)speedLimitWhite;
 + (UIColor *)speedLimitLightGray;
 + (UIColor *)speedLimitDarkGray;
-+ (UIColor *)shadowColorBlue;
-+ (UIColor *)shadowColorPurple;
-+ (UIColor *)subscriptionCellBorder;
-+ (UIColor *)subscriptionCellBackground;
-+ (UIColor *)subscriptionCellTitle;
-+ (UIColor *)discountBackground;
-+ (UIColor *)discountText;
-+ (UIColor *)bookmarkSubscriptionScrollBackground;
-+ (UIColor *)bookmarkSubscriptionBackground;
-+ (UIColor *)bookmarkSubscriptionFooterBackground;
 
 + (UIColor *)colorWithName:(NSString *)colorName;
 + (UIColor *)colorFromHexString:(NSString *)hexString;
@@ -73,9 +42,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (BOOL)isNightMode;
 
 - (UIColor *)opposite;
-
-+ (UIColor *)facebookButtonBackground;
-+ (UIColor *)facebookButtonBackgroundDisabled;
 
 @end
 
