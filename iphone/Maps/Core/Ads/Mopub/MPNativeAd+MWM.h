@@ -1,6 +1,9 @@
 #import "FacebookNativeAdAdapter.h"
+//#import "FBNativeAd.h"
 #import "MPNativeAd.h"
 #import "MPNativeView.h"
+
+@class FBNativeAd;
 
 @interface MPNativeAd (MWM) <MPNativeViewDelegate>
 

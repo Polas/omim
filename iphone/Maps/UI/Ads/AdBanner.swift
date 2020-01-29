@@ -1,4 +1,5 @@
 import FBAudienceNetwork
+import MoPub_FacebookAudienceNetwork_Adapters
 
 @objc(MWMAdBannerState)
 enum AdBannerState: Int {
@@ -186,14 +187,17 @@ final class AdBanner: UITableViewCell {
     } else {
       adCallToActionButtons = [adCallToActionButtonCompact, adCallToActionButtonDetailed]
     }
-    ad.registerView(forInteraction: self, with: nil, withClickableViews: adCallToActionButtons)
+    ad.registerView(forInteraction: self, mediaView: FBMediaView(),
+                    iconImageView: adIconImageView,
+                    viewController: UIViewController.topViewController(),
+                    clickableViews: adCallToActionButtons)
+//    ad.adChoicesIcon?.loadAsync { [weak self] image in
+//      self?.adIconImageView.image = image
+//    }
 
-    ad.icon?.loadAsync { [weak self] image in
-      self?.adIconImageView.image = image
-    }
-    adTitleLabel.attributedText = attributedTitle(title: ad.title ?? "",
-                                                  indent: adPrivacyImage.width + DAAImageWidth.constant)
-    adBodyLabel.text = ad.body ?? ""
+//    adTitleLabel.attributedText = attributedTitle(title: ad.title ?? "",
+//                                                  indent: adPrivacyImage.width + DAAImageWidth.constant)
+//    adBodyLabel.text = ad.body ?? ""
     let config = state.config()
     adTitleLabel.numberOfLines = config.numberOfTitleLines
     adBodyLabel.numberOfLines = config.numberOfBodyLines

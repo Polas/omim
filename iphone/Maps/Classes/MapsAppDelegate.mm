@@ -37,6 +37,7 @@
 
 #include "platform/http_thread_apple.h"
 #include "platform/local_country_file_utils.hpp"
+#include "partners_api/mopub_ads.hpp"
 
 #include "base/assert.hpp"
 
@@ -266,6 +267,22 @@ using namespace osm_auth_ios;
       ws.pendingTransactionHandler = nil;
     }];
   }
+  MPMoPubConfiguration *sdkConfig = [[MPMoPubConfiguration alloc] initWithAdUnitIdForAppInitialization:@(ads::Mopub::InitializationBannerId().c_str())];
+  NSDictionary * facebookConfig = @{ @"native_banner" : @true};
+  NSMutableDictionary * config = [@{@"FacebookAdapterConfiguration" : facebookConfig} mutableCopy];
+//
+  sdkConfig.mediatedNetworkConfigurations = config;
+  sdkConfig.loggingLevel = MPBLogLevelDebug;
+
+//MPStaticNativeAdRendererSettings *settings = [[MPStaticNativeAdRendererSettings alloc] init];
+//MPNativeAdRendererConfiguration *config = [FacebookNativeAdRenderer rendererConfigurationWithRendererSettings:settings];
+//
+//MPNativeAdRequest *adRequest = [MPNativeAdRequest requestWithAdUnitIdentifier:@"YOUR_AD_UNIT_ID" rendererConfigurations:@[config]];
+
+
+  [[MoPub sharedInstance] initializeSdkWithConfiguration:sdkConfig completion:^{
+    //
+  }];
 
   if ([MoPubKit shouldShowConsentDialog])
     [MoPubKit grantConsent];
