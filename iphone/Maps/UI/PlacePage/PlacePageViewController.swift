@@ -39,7 +39,8 @@ enum PlacePageState {
   @IBOutlet var scrollView: UIScrollView!
   @IBOutlet var stackView: UIStackView!
   @IBOutlet var actionBarContainerView: UIView!
-  
+  @IBOutlet var actionBarHeightConstraint: NSLayoutConstraint!
+
   @objc var placePageData: PlacePageData!
 
   var beginDragging = false
@@ -47,6 +48,8 @@ enum PlacePageState {
   var rootViewController: MapViewController {
     MapViewController.shared()
   }
+
+  let kActionBarHeight:CGFloat = 50
 
   // MARK: - UI Components
 
@@ -161,6 +164,11 @@ enum PlacePageState {
     return vc
   } ()
 
+  lazy var elevationMapViewController: UIViewController = {
+    let vc = ElevationProfileBuilder.build(data: placePageData, delegate: self)
+    return vc
+  } ()
+
   // MARK: - VC Lifecycle
 
   override func viewDidLoad() {
@@ -168,31 +176,17 @@ enum PlacePageState {
     if let touchTransparentView = view as? TouchTransparentView {
       touchTransparentView.targetView = scrollView
     }
+    let isActionBarVisible = placePageData.elevationProfileData == nil
 
     addToStack(previewViewController)
+    if placePageData?.elevationProfileData != nil {
+      addToStack(elevationMapViewController)
+    }
 
     if placePageData.isPromoCatalog {
       addToStack(catalogSingleItemViewController)
       addToStack(catalogGalleryViewController)
-      placePageData.loadCatalogPromo { [weak self] in
-        guard let self = self else { return }
-        guard let catalogPromo = self.placePageData.catalogPromo else {
-          if self.placePageData.wikiDescriptionHtml != nil {
-            self.wikiDescriptionViewController.view.isHidden = false
-          }
-          return
-        }
-        if catalogPromo.promoItems.count == 1 {
-          self.catalogSingleItemViewController.promoItem = catalogPromo.promoItems.first!
-          self.catalogSingleItemViewController.view.isHidden = false
-        } else {
-          self.catalogGalleryViewController.promoData = catalogPromo
-          self.catalogGalleryViewController.view.isHidden = false
-          if self.placePageData.wikiDescriptionHtml != nil {
-            self.wikiDescriptionViewController.view.isHidden = false
-          }
-        }
-      }
+      placePageData.loadCatalogPromo(completion: onLoadCatalogPromo)
     }
 
     addToStack(wikiDescriptionViewController)
@@ -214,7 +208,9 @@ enum PlacePageState {
     addToStack(hotelFacilitiesViewController)
     addToStack(hotelReviewsViewController)
 
-    addToStack(infoViewController)
+    if placePageData.infoData != nil {
+      addToStack(infoViewController)
+    }
 
     if placePageData.taxiProvider != .none {
       addToStack(taxiViewController)
@@ -224,24 +220,7 @@ enum PlacePageState {
       addToStack(ratingSummaryViewController)
       addToStack(addReviewViewController)
       addToStack(reviewsViewController)
-      placePageData.loadUgc { [weak self] in
-        if let self = self, let ugcData =  self.placePageData.ugcData {
-          self.previewViewController.updateUgc(ugcData)
-
-          if !ugcData.isTotalRatingEmpty {
-            self.ratingSummaryViewController.ugcData = ugcData
-            self.ratingSummaryViewController.view.isHidden = false
-          }
-          if ugcData.isUpdateEmpty {
-            self.addReviewViewController.view.isHidden = false
-          }
-          if !ugcData.isEmpty {
-            self.reviewsViewController.ugcData = ugcData
-            self.reviewsViewController.view.isHidden = false
-          }
-          self.updatePreviewOffset()
-        }
-      }
+      placePageData.loadUgc(completion: onLoadUgc)
     }
 
     if placePageData.previewData.hasBanner,
@@ -258,40 +237,19 @@ enum PlacePageState {
       addToStack(buttonsViewController)
     }
 
-    placePageData.loadOnlineData { [weak self] in
-      if let self = self, let bookingData = self.placePageData.hotelBooking {
-        self.previewViewController.updateBooking(bookingData, rooms: self.placePageData.hotelRooms)
-        self.stackView.layoutIfNeeded()
-        UIView.animate(withDuration: kDefaultAnimationDuration) {
-          if !bookingData.photos.isEmpty {
-            self.hotelPhotosViewController.photos = bookingData.photos
-            self.hotelPhotosViewController.view.isHidden = false
-          }
-          self.hotelDescriptionViewController.hotelDescription = bookingData.hotelDescription
-          self.hotelDescriptionViewController.view.isHidden = false
-          if bookingData.facilities.count > 0 {
-            self.hotelFacilitiesViewController.facilities = bookingData.facilities
-            self.hotelFacilitiesViewController.view.isHidden = false
-          }
-          if bookingData.reviews.count > 0 {
-            self.hotelReviewsViewController.reviewCount = bookingData.scoreCount
-            self.hotelReviewsViewController.totalScore = bookingData.score
-            self.hotelReviewsViewController.reviews = bookingData.reviews
-            self.hotelReviewsViewController.view.isHidden = false
-          }
-          self.stackView.layoutIfNeeded()
-        }
-      }
-    }
+    placePageData.loadOnlineData(completion: onLoadOnlineData)
 
-    actionBarViewController.view.translatesAutoresizingMaskIntoConstraints = false
-    actionBarContainerView.addSubview(actionBarViewController.view)
-    NSLayoutConstraint.activate([
-      actionBarViewController.view.leadingAnchor.constraint(equalTo: actionBarContainerView.leadingAnchor),
-      actionBarViewController.view.topAnchor.constraint(equalTo: actionBarContainerView.topAnchor),
-      actionBarViewController.view.trailingAnchor.constraint(equalTo: actionBarContainerView.trailingAnchor),
-      actionBarViewController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-    ])
+    actionBarHeightConstraint.constant = isActionBarVisible ? kActionBarHeight : 0
+    if isActionBarVisible {
+      actionBarViewController.view.translatesAutoresizingMaskIntoConstraints = false
+      actionBarContainerView.addSubview(actionBarViewController.view)
+      NSLayoutConstraint.activate([
+        actionBarViewController.view.leadingAnchor.constraint(equalTo: actionBarContainerView.leadingAnchor),
+        actionBarViewController.view.topAnchor.constraint(equalTo: actionBarContainerView.topAnchor),
+        actionBarViewController.view.trailingAnchor.constraint(equalTo: actionBarContainerView.trailingAnchor),
+        actionBarViewController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+      ])
+    }
 
     MWMLocationManager.add(observer: self)
     if let lastLocation = MWMLocationManager.lastLocation() {
@@ -568,6 +526,13 @@ extension PlacePageViewController: ActionBarViewControllerDelegate {
   }
 }
 
+// MARK: - ActionBarViewControllerDelegate
+extension PlacePageViewController: ElevationProfileViewControllerDelegate {
+  func openDifficultyPopup() {
+    MWMPlacePageManagerHelper.openElevationDifficultPopup(placePageData)
+  }
+}
+
 // MARK: - UIScrollViewDelegate
 
 extension PlacePageViewController: UIScrollViewDelegate {
@@ -643,6 +608,74 @@ extension PlacePageViewController: UIScrollViewDelegate {
     }
 
     return result
+  }
+}
+
+// MARK: - PlacePageData async callbacks for loaders
+
+extension PlacePageViewController {
+  func onLoadOnlineData() {
+    if let bookingData = self.placePageData.hotelBooking {
+      self.previewViewController.updateBooking(bookingData, rooms: self.placePageData.hotelRooms)
+      self.stackView.layoutIfNeeded()
+      UIView.animate(withDuration: kDefaultAnimationDuration) {
+        if !bookingData.photos.isEmpty {
+          self.hotelPhotosViewController.photos = bookingData.photos
+          self.hotelPhotosViewController.view.isHidden = false
+        }
+        self.hotelDescriptionViewController.hotelDescription = bookingData.hotelDescription
+        self.hotelDescriptionViewController.view.isHidden = false
+        if bookingData.facilities.count > 0 {
+          self.hotelFacilitiesViewController.facilities = bookingData.facilities
+          self.hotelFacilitiesViewController.view.isHidden = false
+        }
+        if bookingData.reviews.count > 0 {
+          self.hotelReviewsViewController.reviewCount = bookingData.scoreCount
+          self.hotelReviewsViewController.totalScore = bookingData.score
+          self.hotelReviewsViewController.reviews = bookingData.reviews
+          self.hotelReviewsViewController.view.isHidden = false
+        }
+        self.stackView.layoutIfNeeded()
+      }
+    }
+  }
+
+  func onLoadUgc() {
+    if let ugcData =  self.placePageData.ugcData {
+      self.previewViewController.updateUgc(ugcData)
+
+      if !ugcData.isTotalRatingEmpty {
+        self.ratingSummaryViewController.ugcData = ugcData
+        self.ratingSummaryViewController.view.isHidden = false
+      }
+      if ugcData.isUpdateEmpty {
+        self.addReviewViewController.view.isHidden = false
+      }
+      if !ugcData.isEmpty {
+        self.reviewsViewController.ugcData = ugcData
+        self.reviewsViewController.view.isHidden = false
+      }
+      self.updatePreviewOffset()
+    }
+  }
+
+  func onLoadCatalogPromo() {
+    guard let catalogPromo = self.placePageData.catalogPromo else {
+      if self.placePageData.wikiDescriptionHtml != nil {
+        self.wikiDescriptionViewController.view.isHidden = false
+      }
+      return
+    }
+    if catalogPromo.promoItems.count == 1 {
+      self.catalogSingleItemViewController.promoItem = catalogPromo.promoItems.first!
+      self.catalogSingleItemViewController.view.isHidden = false
+    } else {
+      self.catalogGalleryViewController.promoData = catalogPromo
+      self.catalogGalleryViewController.view.isHidden = false
+      if self.placePageData.wikiDescriptionHtml != nil {
+        self.wikiDescriptionViewController.view.isHidden = false
+      }
+    }
   }
 }
 
