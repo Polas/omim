@@ -35,6 +35,7 @@
 		3D0BBB9C23F3FDAE00A50354 /* libtraffic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0BBB9B23F3FDAE00A50354 /* libtraffic.a */; };
 		3D0BBBA623F40F5600A50354 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0BBAE823F3EF4B00A50354 /* CoreLocation.framework */; };
 		3D0BBBA723F40F6500A50354 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0BBAEC23F3EFBC00A50354 /* Security.framework */; };
+		3D0BBBA723F40F6500A50354 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D0BBAEC23F3EFBC00A50354 /* Security.framework */; };
 		3D0D2F7323D854AA00945C8D /* tips_api_delegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3D0D2F7123D854AA00945C8D /* tips_api_delegate.cpp */; };
 		3D0D2F7423D854AA00945C8D /* tips_api_delegate.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3D0D2F7223D854AA00945C8D /* tips_api_delegate.hpp */; };
 		3D1775A42317E2FD00F8889C /* promo_catalog_poi_checker.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 3D1775A22317E2FD00F8889C /* promo_catalog_poi_checker.hpp */; };
@@ -324,6 +325,7 @@
 		3D0BBB9723F3F45F00A50354 /* libindexer_tests_support.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libindexer_tests_support.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0BBB9923F3FCF700A50354 /* libweb_api.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libweb_api.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0BBB9B23F3FDAE00A50354 /* libtraffic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtraffic.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0BBB9B23F3FDAE00A50354 /* libtraffic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libtraffic.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D0D2F7123D854AA00945C8D /* tips_api_delegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tips_api_delegate.cpp; sourceTree = "<group>"; };
 		3D0D2F7223D854AA00945C8D /* tips_api_delegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = tips_api_delegate.hpp; sourceTree = "<group>"; };
 		3D1775A22317E2FD00F8889C /* promo_catalog_poi_checker.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = promo_catalog_poi_checker.hpp; sourceTree = "<group>"; };
@@ -569,6 +571,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				56DAC37623992556000BC50D /* libtraffic.a in Frameworks */,
+				3D0BBBA623F40F5600A50354 /* CoreLocation.framework in Frameworks */,
+				3D0BBB9C23F3FDAE00A50354 /* libtraffic.a in Frameworks */,
+				3D0BBB9A23F3FCF700A50354 /* libweb_api.a in Frameworks */,
 				3DA5722720C1951D007BDE27 /* libz.tbd in Frameworks */,
 				3DA5721E20C194B8007BDE27 /* libgenerator.a in Frameworks */,
 				3DA5722020C194B8007BDE27 /* libopen_location_code.a in Frameworks */,

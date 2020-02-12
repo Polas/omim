@@ -588,6 +588,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0BBADD23F3EE1300A50354 /* libminizip.dylib in Frameworks */,
 				6715565720BF1019002BA3B4 /* libeditor_tests_support.a in Frameworks */,
 				6715565920BF1019002BA3B4 /* libopen_location_code.a in Frameworks */,
 				39AEF86C1FB45E1600943FC9 /* libz.tbd in Frameworks */,
@@ -1092,6 +1093,7 @@
 				931469E922E09D210048495E /* region_address_getter.hpp in Headers */,
 				F652D8C01CFDE1E800FC29A0 /* engine.hpp in Headers */,
 				39AEF84D1FB45D7800943FC9 /* feature_loader.hpp in Headers */,
+				3D0BBB9F23F3FDE100A50354 /* helpers.hpp in Headers */,
 				675346DF1A40560D00A0A8C3 /* feature_offset_match.hpp in Headers */,
 				6796249A1D10137D00AE4E3C /* test_search_request.hpp in Headers */,
 				347F331A1C4540A8009758CC /* dummy_rank_table.hpp in Headers */,
@@ -1368,6 +1370,7 @@
 				39B2B9421FB461F800AB85A1 /* downloader_search_test.cpp in Sources */,
 				40AC86EB214A96EC003A96D1 /* cuisine_filter.cpp in Sources */,
 				39AEF8361FB4597300943FC9 /* tracer.cpp in Sources */,
+				3D0BBBA023F3FDE100A50354 /* helpers.cpp in Sources */,
 				F6E2AFFF1D9E794800793C36 /* categories_cache.cpp in Sources */,
 				39AEF84C1FB45D7800943FC9 /* feature_loader.cpp in Sources */,
 				3441CE521CFC1D7000CF30D4 /* query_params.cpp in Sources */,

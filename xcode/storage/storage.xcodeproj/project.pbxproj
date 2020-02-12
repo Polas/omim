@@ -238,6 +238,7 @@
 		3971141B229D8983003915E5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3971141D229D89F4003915E5 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		39B9682123E1AC5F00D3B8E3 /* libge0.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libge0.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D0BBAE023F3EE4F00A50354 /* libminizip.dylib */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libminizip.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D497E9E23292706000FB57D /* map_files_downloader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = map_files_downloader.cpp; sourceTree = "<group>"; };
 		3D497E9F23292706000FB57D /* map_files_downloader_with_ping.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = map_files_downloader_with_ping.hpp; sourceTree = "<group>"; };
 		3D497EA023292706000FB57D /* map_files_downloader_with_ping.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = map_files_downloader_with_ping.cpp; sourceTree = "<group>"; };
@@ -381,6 +382,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D0BBADF23F3EE3E00A50354 /* libminizip.dylib in Frameworks */,
 				3971141E229D89F4003915E5 /* Security.framework in Frameworks */,
 				3971141C229D8983003915E5 /* CoreLocation.framework in Frameworks */,
 				56EE14E11FE813FC0036F20C /* libbsdiff.a in Frameworks */,
