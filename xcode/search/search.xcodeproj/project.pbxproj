@@ -588,7 +588,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D0BBADD23F3EE1300A50354 /* libminizip.dylib in Frameworks */,
 				6715565720BF1019002BA3B4 /* libeditor_tests_support.a in Frameworks */,
 				6715565920BF1019002BA3B4 /* libopen_location_code.a in Frameworks */,
 				39AEF86C1FB45E1600943FC9 /* libz.tbd in Frameworks */,
