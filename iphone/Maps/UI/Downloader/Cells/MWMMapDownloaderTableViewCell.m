@@ -103,7 +103,7 @@
       break;
     }
     case MWMMapNodeStatusDownloading:
-      progress.progress = kMaxProgress * nodeAttrs.downloadedSize / nodeAttrs.totalSize;
+      progress.progress = kMaxProgress * nodeAttrs.downloadedSize / nodeAttrs.totalUpdateSizeBytes;
       break;
     case MWMMapNodeStatusApplying:
     case MWMMapNodeStatusInQueue:
